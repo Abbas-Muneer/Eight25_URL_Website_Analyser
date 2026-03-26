@@ -1,0 +1,70 @@
+{
+  "id": "2026-03-26T12:43:59.804Z-g5wqo5",
+  "timestamp": "2026-03-26T12:43:59.804Z",
+  "url": "https://www.semantixlabs.com/",
+  "systemPrompt": "You are a senior website strategist reviewing a single marketing page for SEO structure, UX clarity, CRO, and messaging.\n\nRules:\n- Only use the provided structured metrics and content excerpts.\n- Do not invent missing facts, page elements, or performance data.\n- Treat all extracted metrics as the source of truth.\n- If data is missing or unavailable, say so explicitly.\n- Keep findings concise, specific, and tied to evidence.\n- Recommendations must be practical, prioritized, and grounded in the supplied facts.\n- Return strict JSON only, matching the required schema exactly.",
+  "userPrompt": "Analyze this single-page website audit payload.\n\nRequired output shape:\n{\n  \"executiveSummary\": string,\n  \"seoStructure\": { \"status\": \"good\" | \"warning\" | \"poor\" | \"mixed\", \"summary\": string, \"evidence\": string[] },\n  \"messagingClarity\": { \"status\": \"good\" | \"warning\" | \"poor\" | \"mixed\", \"summary\": string, \"evidence\": string[] },\n  \"ctaUsage\": { \"status\": \"good\" | \"warning\" | \"poor\" | \"mixed\", \"summary\": string, \"evidence\": string[] },\n  \"contentDepth\": { \"status\": \"good\" | \"warning\" | \"poor\" | \"mixed\", \"summary\": string, \"evidence\": string[] },\n  \"uxStructuralConcerns\": { \"status\": \"good\" | \"warning\" | \"poor\" | \"mixed\", \"summary\": string, \"evidence\": string[] },\n  \"prioritizedRecommendations\": [\n    { \"priority\": \"high\" | \"medium\" | \"low\", \"title\": string, \"rationale\": string, \"action\": string }\n  ]\n}\n\nConstraints:\n- Produce 3 to 5 recommendations.\n- Reference extracted facts directly where relevant.\n- Do not mention metrics that are not present in the input.\n- Do not assume multi-page context or sitewide behavior.\n- Keep all copy executive-ready and concise.\n\nAudit payload:\n{\n  \"extractedMetrics\": {\n    \"url\": \"https://www.semantixlabs.com/\",\n    \"finalUrl\": \"https://www.semantixlabs.com/\",\n    \"metaTitle\": \"Digital Agency for Web Development & Growth | Semantix Labs\",\n    \"metaDescription\": \"Semantix Labs is a leading Tech Agency in Sri Lanka offering expert Web Development, Software, Branding & Digital Solutions to grow your business.\",\n    \"totalWordCount\": 283,\n    \"headings\": {\n      \"h1\": 1,\n      \"h2\": 6,\n      \"h3\": 15\n    },\n    \"ctas\": {\n      \"count\": 11,\n      \"samples\": [\n        \"Contact\",\n        \"Start Project\",\n        \"Start a Project\",\n        \"View Our Work\",\n        \"Send Message\",\n        \"LinkedIn\"\n      ]\n    },\n    \"links\": {\n      \"total\": 12,\n      \"internal\": 8,\n      \"external\": 4\n    },\n    \"images\": {\n      \"total\": 38,\n      \"missingAlt\": 0,\n      \"missingAltPercent\": 0,\n      \"altSamples\": [\n        \"Semantix Labs Logo\",\n        \"Bamba 325\",\n        \"Bilal\",\n        \"Boxit\",\n        \"Care SL\",\n        \"Cuddles and co\"\n      ]\n    },\n    \"contentPreview\": {\n      \"title\": \"Turn Ideas into Impact. Built fast. Built right.\",\n      \"topHeadings\": [\n        \"Turn Ideas into Impact. Built fast. Built right.\",\n        \"Trusted by startups, scale-ups, and growing brands.\",\n        \"Crafted for impact.\",\n        \"Web & Software\",\n        \"Brand Identity\",\n        \"Digital Growth\"\n      ],\n      \"firstParagraphs\": [\n        \"We design and engineer scalable digital products with a focus on performance, reliability, and long term growth.\",\n        \"We don't just build websites. We build comprehensive digital ecosystems that drive growth.\",\n        \"High-performance websites and custom software tailored to your business logic.\"\n      ],\n      \"bodyExcerpt\": \"SolutionsProcessFeatured WorkContactStart ProjectRedefining Digital ExperiencesTurn Ideas into Impact. Built fast. Built right.We design and engineer scalable digital products with a focus on performance, reliability, and long term growth.Start a ProjectView Our WorkOur Trusted ClientsTrusted by startups, scale-ups, and growing brands.Crafted for impact.We don't just build websites. We build comprehensive digital ecosystems that drive growth.Web & SoftwareHigh-performance websites and custom software tailored to your business logic.Brand IdentityMemorable logos and brand guidelines that set you apart from the competition.Digital GrowthSEO, social media, and performance marketing to skyrocket your reach.UI/UX DesignUser-centric interfaces that convert visitors into loyal customers.AI AutomationsSmart workflows and chatbots to streamline your operations.Mobile AppsNative and cross-platform mobile applications for iOS and Android.Technology ExpertsFuture-proof solutions with updated technologies.Our team is committed to delivering solutions with future-proof, updated technologies. We stay ahead of the curve so your business never falls behind.Everything you need.From strategy to execution, we provide end-to-end solutions for modern businesses.EfficiencyAI & AutomationLeverage the power of Artificial Intelligence to automate repetitive tasks and gain insights.Learn moreGrowthModer…\"\n    }\n  }\n}",
+  "structuredInput": {
+    "extractedMetrics": {
+      "url": "https://www.semantixlabs.com/",
+      "finalUrl": "https://www.semantixlabs.com/",
+      "metaTitle": "Digital Agency for Web Development & Growth | Semantix Labs",
+      "metaDescription": "Semantix Labs is a leading Tech Agency in Sri Lanka offering expert Web Development, Software, Branding & Digital Solutions to grow your business.",
+      "totalWordCount": 283,
+      "headings": {
+        "h1": 1,
+        "h2": 6,
+        "h3": 15
+      },
+      "ctas": {
+        "count": 11,
+        "samples": [
+          "Contact",
+          "Start Project",
+          "Start a Project",
+          "View Our Work",
+          "Send Message",
+          "LinkedIn"
+        ]
+      },
+      "links": {
+        "total": 12,
+        "internal": 8,
+        "external": 4
+      },
+      "images": {
+        "total": 38,
+        "missingAlt": 0,
+        "missingAltPercent": 0,
+        "altSamples": [
+          "Semantix Labs Logo",
+          "Bamba 325",
+          "Bilal",
+          "Boxit",
+          "Care SL",
+          "Cuddles and co"
+        ]
+      },
+      "contentPreview": {
+        "title": "Turn Ideas into Impact. Built fast. Built right.",
+        "topHeadings": [
+          "Turn Ideas into Impact. Built fast. Built right.",
+          "Trusted by startups, scale-ups, and growing brands.",
+          "Crafted for impact.",
+          "Web & Software",
+          "Brand Identity",
+          "Digital Growth"
+        ],
+        "firstParagraphs": [
+          "We design and engineer scalable digital products with a focus on performance, reliability, and long term growth.",
+          "We don't just build websites. We build comprehensive digital ecosystems that drive growth.",
+          "High-performance websites and custom software tailored to your business logic."
+        ],
+        "bodyExcerpt": "SolutionsProcessFeatured WorkContactStart ProjectRedefining Digital ExperiencesTurn Ideas into Impact. Built fast. Built right.We design and engineer scalable digital products with a focus on performance, reliability, and long term growth.Start a ProjectView Our WorkOur Trusted ClientsTrusted by startups, scale-ups, and growing brands.Crafted for impact.We don't just build websites. We build comprehensive digital ecosystems that drive growth.Web & SoftwareHigh-performance websites and custom software tailored to your business logic.Brand IdentityMemorable logos and brand guidelines that set you apart from the competition.Digital GrowthSEO, social media, and performance marketing to skyrocket your reach.UI/UX DesignUser-centric interfaces that convert visitors into loyal customers.AI AutomationsSmart workflows and chatbots to streamline your operations.Mobile AppsNative and cross-platform mobile applications for iOS and Android.Technology ExpertsFuture-proof solutions with updated technologies.Our team is committed to delivering solutions with future-proof, updated technologies. We stay ahead of the curve so your business never falls behind.Everything you need.From strategy to execution, we provide end-to-end solutions for modern businesses.EfficiencyAI & AutomationLeverage the power of Artificial Intelligence to automate repetitive tasks and gain insights.Learn moreGrowthModer…"
+      }
+    }
+  },
+  "rawModelOutput": "429 You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.",
+  "parsedOutput": null,
+  "logFilePath": null
+}
