@@ -29,6 +29,7 @@ function shouldFallbackToRender(html: string, status: number) {
 export async function fetchPage(url: string, options: FetchPageOptions = {}): Promise<FetchPageResult> {
   const controller = new AbortController();
   const timeout = setTimeout(() => controller.abort(), options.timeoutMs ?? 12000);
+  let fallbackHtmlResult: FetchPageResult | null = null;
 
   try {
     const response = await fetch(url, {
@@ -48,6 +49,13 @@ export async function fetchPage(url: string, options: FetchPageOptions = {}): Pr
         status: response.status
       };
     }
+
+    fallbackHtmlResult = {
+      html,
+      finalUrl: response.url,
+      strategy: "html",
+      status: response.status
+    };
   } catch (error) {
     if (!(error instanceof Error && error.name === "AbortError")) {
       // Continue to fallback.
@@ -65,6 +73,10 @@ export async function fetchPage(url: string, options: FetchPageOptions = {}): Pr
       status: rendered.status
     };
   } catch (error) {
+    if (fallbackHtmlResult) {
+      return fallbackHtmlResult;
+    }
+
     const message = error instanceof Error ? error.message : "Failed to fetch the page";
     throw new AppError("PAGE_FETCH_FAILED", "Unable to load the requested page.", message);
   }
