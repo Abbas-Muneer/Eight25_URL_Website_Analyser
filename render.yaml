@@ -1,11 +1,11 @@
 services:
   - type: web
     name: eight25-website-audit-tool
-    runtime: node
+    runtime: docker
     plan: free
     branch: main
-    buildCommand: npm install && npm run build
-    startCommand: npm run start
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
     autoDeploy: true
     envVars:
       - key: NODE_VERSION

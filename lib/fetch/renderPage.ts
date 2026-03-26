@@ -5,7 +5,10 @@ type RenderPageOptions = {
 };
 
 export async function renderPage(url: string, options: RenderPageOptions = {}) {
-  const browser = await chromium.launch({ headless: true });
+  const browser = await chromium.launch({
+    headless: true,
+    args: ["--no-sandbox", "--disable-dev-shm-usage"]
+  });
   const page = await browser.newPage({
     viewport: {
       width: 1440,
